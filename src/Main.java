@@ -4,7 +4,7 @@ public class Main {
 		System.out.println("Hello World!");
 	}
 */
-
+/*	A+B
 import java.util.Scanner;
 
 public class Main {
@@ -26,3 +26,47 @@ public class Main {
 				
 	}
 }
+*/
+//Boj No.11382
+import java.util.Scanner;
+
+public class Main{
+	
+	public static long Calc(long A, long B, long C) {
+		return (A+B+C);
+	}
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		long inputNumber1 = input.nextLong();
+		long inputNumber2 = input.nextLong();
+		long inputNumber3 = input.nextLong();
+		long calcNumber = Calc(inputNumber1, inputNumber2, inputNumber3);
+		System.out.println(calcNumber);
+		
+		return ;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

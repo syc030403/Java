@@ -27,7 +27,8 @@ public class Main {
 	}
 }
 */
-//Boj No.11382
+//BojNo.11382
+/*
 import java.util.Scanner;
 
 public class Main{
@@ -48,7 +49,44 @@ public class Main{
 		return ;
 	}
 }
+*/
+//BojNo.2525
 
+import java.util.Scanner;
+
+public class Main{
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int hour = scanner.nextInt();
+		int minute = scanner.nextInt();
+		int time = scanner.nextInt();
+		int printHour = 0;
+		int printMinute = 0;
+		
+		if(time >= 60) {
+			printHour = hour + ((time - (time % 60)) / 60);
+			printMinute = minute + (time % 60);
+			if(printMinute >= 60) {
+				printHour = printHour + ((printMinute - (printMinute % 60)) / 60);
+				printMinute = printMinute % 60;
+			}
+		}else {
+			printHour = hour;
+			printMinute = minute + time;
+			if(printMinute >= 60) {
+				printHour = printHour + ((printMinute - (printMinute % 60)) / 60);
+				printMinute = printMinute % 60;
+			}
+		}
+		
+		System.out.print(printHour % 24);
+		System.out.print(" ");
+		System.out.print(printMinute);
+		
+	}
+}
 
 
 

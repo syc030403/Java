@@ -51,7 +51,7 @@ public class Main{
 }
 */
 //BojNo.2525
-
+/*
 import java.util.Scanner;
 
 public class Main{
@@ -85,6 +85,27 @@ public class Main{
 		System.out.print(" ");
 		System.out.print(printMinute);
 		
+	}
+}
+*/
+// BojNo.25314
+import java.util.Scanner;
+
+public class Main{
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int number = scanner.nextInt();
+		int i = 0;
+		number = number / 4;
+		
+		for(i = 0; i < number; i++) {
+			System.out.print("long ");
+		}
+		System.out.print("int");
+		
+		return;
 	}
 }
 

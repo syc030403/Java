@@ -111,6 +111,7 @@ public class Main{
 }
 */
 // BojNo.25304
+/*
 import java.util.Scanner;
 
 public class Main{
@@ -140,6 +141,25 @@ public class Main{
 		
 		return;
 		
+	}
+}
+*/
+//BojNo.10951 
+
+import java.util.Scanner; 
+
+public class Main{
+	public static void main(String[]args){
+		Scanner scanner = new Scanner(System.in); 
+		int numberA = 0;
+		int numberB = 0;
+		// EOF를 이용한 while문 무한반복
+		// while은 조건이 항상 True이면 무한반복을 만들 수 있음, False면 종료
+		while (scanner.hasNextInt()) { // hasnext~() 메서드는 입력값이 생기기 전 까지는 실행을 안함, 입력하는 값에따라 True/False 반환
+				numberA = scanner.nextInt();
+				numberB = scanner.nextInt();
+				System.out.println(numberA+numberB);
+		}
 	}
 }
 

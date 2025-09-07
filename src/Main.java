@@ -89,6 +89,7 @@ public class Main{
 }
 */
 // BojNo.25314
+/*
 import java.util.Scanner;
 
 public class Main{
@@ -106,6 +107,39 @@ public class Main{
 		System.out.print("int");
 		
 		return;
+	}
+}
+*/
+// BojNo.25304
+import java.util.Scanner;
+
+public class Main{
+	public static void main(String[]args){
+		int totalPrice = 0;
+		int totalNumber = 0;
+		int price = 0;
+		int number = 0;
+		int calcPrice = 0;
+
+		Scanner scanner = new Scanner(System.in);
+
+		totalPrice = scanner.nextInt();
+		totalNumber = scanner.nextInt();
+
+		for(int i = 0; i < totalNumber; i++){
+			price = scanner.nextInt();
+			number = scanner.nextInt();
+			calcPrice = calcPrice + (price * number);
+		}
+
+		if(totalPrice == calcPrice){
+			System.out.println("Yes");
+		}else{
+			System.out.println("No");
+		}
+		
+		return;
+		
 	}
 }
 

@@ -166,6 +166,7 @@ public class Main{
 }
 */
 // BojNo.10807
+/*
 import java.util.Scanner;
 
 public class Main{
@@ -190,11 +191,93 @@ public class Main{
 		}
 		
 		System.out.println(count);
+		scanner.close();
+		return;
 	}
 }
+*/
+// BojNo.10818
+/*
+ * 1. 버블정렬(비효율적)
+import java.util.Scanner;
 
+public class Main {
+	public static void main(String[]args) {
+		Scanner scanner = new Scanner(System.in);
+		int numberN = scanner.nextInt();
+		int array[] = new int[numberN];
+		int buffer = 0;
+		for(int i = 0; i < numberN; i++) {
+			array[i] = scanner.nextInt();
+		}
+		
+		for(int i = 0; i < numberN; i++) {
+			for(int j = 0; j < numberN; j++) {
+				if(array[i]<=array[j]) {
+					buffer = array[i];
+					array[i] = array[j];
+					array[j] = buffer;
+				}
+			}
+		}
+		
+		System.out.print(array[0]);
+		System.out.print(" ");
+		System.out.print(array[numberN-1]);
+		
+		scanner.close();
+		return;
+		
+	}
+}
+*/
+/* 2.Arrays.sort 사용(효율적)
+import java.util.Arrays;
+import java.util.Scanner;
 
+public class Main{
+	public static void main(String[]args) {
+		Scanner scanner = new Scanner(System.in);
+		int numberN = scanner.nextInt();
+		int array[] = new int[numberN];
+		int buffer = 0;
+		for(int i = 0; i < numberN; i++) {
+			array[i] = scanner.nextInt();
+		}
+		
+		Arrays.sort(array);
+		System.out.print(array[0]);
+		System.out.print(" ");
+		System.out.print(array[numberN-1]);
+		
+		
+	}
+}
+*/ // 단순 최댓값 최솟값 비교는 반복문 안써도 됨
+/*
+import java.util.Scanner;
 
+public class Main {
+	public static void main(String[]args) {
+		Scanner scanner = new Scanner(System.in);
+		int numberN = scanner.nextInt();
+		int max = scanner.nextInt();
+		int min = max;
+		
+		for(int i = 0; i < numberN-1; i++) {
+			int num = scanner.nextInt();
+			if(num < min) {
+				min = num;
+			}else if(num > max) {
+				max = num;
+			}
+		}
+		System.out.println(min + " " + max);
+		scanner.close();
+		return;
+	}
+}
+*/
 
 
 

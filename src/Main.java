@@ -145,7 +145,7 @@ public class Main{
 }
 */
 //BojNo.10951 
-
+/*
 import java.util.Scanner; 
 
 public class Main{
@@ -160,8 +160,40 @@ public class Main{
 				numberB = scanner.nextInt();
 				System.out.println(numberA+numberB);
 		}
+	scanner.close(); // 스캐너 종
+	return;
 	}
 }
+*/
+// BojNo.10807
+import java.util.Scanner;
+
+public class Main{
+	public static void main(String[]args) {
+		Scanner scanner = new Scanner(System.in);
+		int numberN = 0;
+		int compareNumber = 0;
+		int count = 0;
+		numberN = scanner.nextInt();
+		
+		int[] inputNumberArray = new int[numberN];
+		for(int i = 0;i < numberN;i++) {
+			inputNumberArray[i] = scanner.nextInt();
+		}
+		
+		compareNumber = scanner.nextInt();
+		
+		for(int i = 0;i < numberN; i++) {
+			if(inputNumberArray[i] == compareNumber) {
+				count++;
+			}
+		}
+		
+		System.out.println(count);
+	}
+}
+
+
 
 
 

@@ -279,7 +279,7 @@ public class Main {
 }
 */
 // BojNo. 2562
-
+/*
 import java.util.Scanner;
 
 public class Main{
@@ -303,6 +303,43 @@ public class Main{
 		System.out.println(maxIndex+1);
 	}
 }
+*/
+// BojNo.1546
+/*
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		int number = scanner.nextInt();
+		double max = 0;
+		double scoreArray[] = new double[number]; // 자료형 주의
+		double scoreSum = 0;
+		
+		for(int i = 0; i < number; i++) {
+			scoreArray[i] = scanner.nextDouble();
+			if(max <= scoreArray[i]) {
+				 max = scoreArray[i];
+			}
+		}
+		
+		for(int i = 0; i < number; i++) {
+			
+			scoreSum = scoreSum + (scoreArray[i]/max*100);
+		}
+		
+		System.out.println(scoreSum/number);
+		
+	}
+}
+*/
+
+
+
+
+
+
 
 
 

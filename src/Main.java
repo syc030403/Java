@@ -334,6 +334,43 @@ public class Main {
 	}
 }
 */
+// Bojno.10811
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[]args) {
+		Scanner scanner = new Scanner(System.in);
+		int N = scanner.nextInt();
+		int M = scanner.nextInt();
+		int tmp = 0;
+		int array[] = new int[N];
+		
+		for(int k = 1; k < N+1; k++) {
+			array[k-1] = k;
+			}
+		
+		for(int k = 0; k < M; k++) {
+			 int i = scanner.nextInt();
+			 int j = scanner.nextInt();
+			 for(;i<j+1;i++) {
+				 tmp = array[i-1];
+				 array[i-1] = array[j-1];
+				 array[j-1] = tmp;
+				 j--;
+			 }
+		}
+		for(int k = 0; k < N; k++) {
+			System.out.print(array[k]);
+			System.out.print(" ");
+		}
+		scanner.close();
+		return;
+	}
+}
+
+
 
 
 

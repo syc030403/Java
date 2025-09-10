@@ -335,7 +335,7 @@ public class Main {
 }
 */
 // Bojno.10811
-
+/*
 import java.util.Scanner;
 
 public class Main {
@@ -369,7 +369,41 @@ public class Main {
 		return;
 	}
 }
+*/
+// BojNo.3052
+/*
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int array[] = new int[10];
+        int countB = 0;
+        
+        for(int i = 0; i < array.length; i++) {
+            int inputNumber = scanner.nextInt();
+            array[i] = inputNumber % 42;
+            
+            // 이전에 같은 값이 있었는지 체크
+            boolean isDuplicate = false;
+            for(int j = 0; j < i; j++) {
+                if(array[i] == array[j]) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            
+            // 처음 나타나는 값이면 카운트
+            if(!isDuplicate) {
+                countB++;
+            }
+        }
+        
+        System.out.print(countB);
+    }
+}
+*/
 
 
 
